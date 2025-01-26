@@ -23,9 +23,9 @@
             <div class="arrow-hint"></div>
         </div>
     </header>
-
     <nav class="main-menu" id="mainMenu">
         <div class="menu-content">
+        
             <ul>
                 <li><a href="experiencia.html">Mi experiencia laboral</a></li>
                 <li><a href="estudios.html">Mis estudios y herramientas</a></li>
@@ -124,3 +124,19 @@
     </script>
 </body>
 </html>
+
+function closeMenu() {
+    const mainMenu = document.getElementById('mainMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    mainMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+}
+
+document.addEventListener('click', function(event) {
+    const mainMenu = document.getElementById('mainMenu');
+    const menuToggle = document.getElementById('menuToggle');
+    if (!mainMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+        mainMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    }
+});

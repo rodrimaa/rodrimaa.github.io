@@ -375,3 +375,153 @@
   margin-top: 20px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .content-grid {
+      grid-template-columns: 1fr; /* Cambia a una sola columna en móviles */
+  }
+
+  .left-column {
+      padding: 1rem; /* Reduce el padding en móviles */
+  }
+
+  .title {
+      font-size: 2.5rem; /* Reduce el tamaño del título en móviles */
+      line-height: 1.2;
+  }
+
+  .description {
+      font-size: 1rem; /* Reduce el tamaño de la descripción en móviles */
+  }
+
+  .skills {
+      font-size: 1rem; /* Reduce el tamaño del texto en móviles */
+  }
+
+  .right-column {
+      min-height: 30vh; /* Reduce la altura de la columna derecha en móviles */
+  }
+
+  .profile-container {
+      width: 250px; /* Reduce el tamaño de la imagen de perfil en móviles */
+      height: 250px;
+  }
+
+  .dots {
+      top: 1rem; /* Ajusta la posición de los puntos en móviles */
+      right: 1rem;
+  }
+
+  .arrow {
+      bottom: 2rem; /* Ajusta la posición de la flecha en móviles */
+      right: 1rem;
+  }
+
+  .menu-hint {
+      display: none; /* Oculta la flecha de sugerencia en móviles */
+  }
+
+  .main-menu ul li a {
+      font-size: 1.2rem; /* Reduce el tamaño de los enlaces del menú en móviles */
+  }
+
+  .contact-section h3 {
+      font-size: 1.1rem; /* Reduce el tamaño del título de contacto en móviles */
+  }
+
+  .contact-section p {
+      font-size: 0.9rem; /* Reduce el tamaño del texto de contacto en móviles */
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+      padding: 0.5rem; /* Ajusta el padding del botón del menú */
+  }
+
+  .main-menu ul li {
+      margin-bottom: 1.5rem; /* Aumenta el espacio entre los elementos del menú */
+  }
+
+  .main-menu ul li a {
+      font-size: 1.5rem; /* Aumenta el tamaño de los enlaces del menú */
+  }
+
+  .contact-section {
+      padding-top: 1.5rem; /* Aumenta el espacio en la sección de contacto */
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+      width: 200px; /* Reduce el tamaño de la imagen de perfil en móviles */
+      height: 200px;
+  }
+
+  .overlay-text {
+      font-size: 1rem; /* Reduce el tamaño del texto del overlay en móviles */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .cv-section, .studies-section, .timeline {
+      padding: 1rem; /* Reduce el padding en móviles */
+  }
+
+  .cv-section h1, .studies-section h2 {
+      font-size: 2rem; /* Reduce el tamaño de los títulos en móviles */
+  }
+
+  .cv-section h2, .studies-section h3 {
+      font-size: 1.5rem; /* Reduce el tamaño de los subtítulos en móviles */
+  }
+
+  .cv-section p, .studies-section p {
+      font-size: 1rem; /* Reduce el tamaño del texto en móviles */
+  }
+
+  .tools-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta el grid de herramientas en móviles */
+  }
+
+  .tool-item {
+      padding: 0.5rem; /* Reduce el padding de los elementos de herramientas en móviles */
+  }
+
+  .timeline-item {
+      width: 100%; /* Ajusta el ancho de los elementos del timeline en móviles */
+      padding-left: 70px;
+      padding-right: 25px;
+  }
+
+  .timeline::after {
+      left: 31px; /* Ajusta la línea del timeline en móviles */
+  }
+
+  .experience-logo {
+      display: none; /* Oculta los logos en móviles para ahorrar espacio */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+      font-size: 1.5rem; /* Reduce el tamaño del nombre en móviles */
+  }
+
+  .menu-hint {
+      top: 20px; /* Ajusta la posición vertical del mensaje */
+      right: 60px; /* Ajusta la posición horizontal del mensaje */
+  }
+
+  .menu-hint span {
+      font-size: 0.8rem; /* Reduce el tamaño del texto del mensaje */
+  }
+
+  .arrow-hint {
+      width: 15px; /* Reduce el tamaño de la flecha */
+      height: 15px;
+  }
+}
+
