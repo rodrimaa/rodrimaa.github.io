@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Estudios y Herramientas - Rodrigo Morales</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .studies-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .studies-section h2 {
+            background: linear-gradient(to right, #3a31d8, #1d9bf0); 
+            -webkit-background-clip: text; 
+            background-clip: text; 
+            color: transparent; 
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+}
+
+        .study-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .study-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-right: 2rem;
+            border-radius: 50%;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .study-item .details {
+            flex: 1;
+        }
+
+        .study-item h3 {
+            color: #1d9bf0;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .study-item p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+        }
+
+        .languages-section {
+            margin-top: 3rem;
+        }
+
+        .language-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .language-item h3 {
+            color: #1d9bf0;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-bar .progress {
+            height: 100%;
+            width: 70%;
+            background: linear-gradient(to right, #3a31d8, #1d9bf0);
+            border-radius: 5px;
+            animation: progress-animation 8s;
+        }
+
+        @keyframes progress-animation {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 70%;
+            }
+        }
+
+        .tools-section {
+            margin-top: 3rem;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-item {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .tool-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-item p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="circle-decoration"></div>
+
+    <header>
+        <div class="logo">Rodrigo Morales</div>
+        <a href="index.html" class="back-button">
+            <i class="fas fa-home"></i> Volver al Inicio
+        </a>
+    </header>
+
+    <main class="studies-section">
+        <h2>Mis Estudios</h2>
+
+        <!-- Universidad -->
+        <div class="study-item">
+            <img src="https://pbs.twimg.com/media/C95uV6hXUAA3mI7.jpg:large" alt="Logo Universidad Diego Portales">
+            <div class="details">
+                <h3>Universidad Diego Portales</h3>
+                <p>Ingeniería Civil Industrial</p>
+                <p>2019 - 2025</p>
+            </div>
+        </div>
+
+        <!-- Educación Adicional -->
+        <div class="study-item">
+            <img src="https://yt3.googleusercontent.com/ytc/AIdro_mBVyMWGE2CO9ql_8kyQNYnINL5r2kJCjaUhrzqrxDBIJA=s900-c-k-c0x00ffffff-no-rj" alt="Logo Bluuweb">
+            <div class="details">
+                <h3>Curso para Desarrolladores Web</h3>
+                <p>Bluuweb - HTML, CSS y JavaScript (Nivel Intermedio)</p>
+                <p>2024</p>
+            </div>
+        </div>
+
+        <!-- Colegio -->
+        <div class="study-item">
+            <img src="https://www.pumahue.cl/puerto-montt/wp-content/uploads/sites/26/2015/11/logos-finales-01.png" alt="Logo Colegio Pumahue Chicureo">
+            <div class="details">
+                <h3>Colegio Pumahue Chicureo</h3>
+                <p>Educación Media</p>
+                <p>2012 - 2018</p>
+            </div>
+        </div>
+
+        <!-- Idiomas -->
+        <div class="languages-section">
+            <h2>Idiomas</h2>
+            <div class="language-item">
+                <h3>Inglés: B2</h3>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <p>Intermedio Avanzado</p>
+            </div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="tools-section">
+            <h2>Manejo de Herramientas</h2>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <img src="https://bookdown.org/ndphillips/YaRrr/images/Rlogo.png" alt="R/R Studio">
+                    <p>R / R Studio</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Microsoft_Office_Access_%282019-present%29.svg/2097px-Microsoft_Office_Access_%282019-present%29.svg.png" alt="Microsoft Access">
+                    <p>Microsoft Access</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png" alt="Adobe Photoshop">
+                    <p>Adobe Photoshop</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://5.imimg.com/data5/SELLER/Default/2023/8/333136530/AE/NB/MR/9369763/oracle-bpm-software-500x500.png" alt="Oracle Studio">
+                    <p>Oracle Studio BPM</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://www.northware.mx/wp-content/uploads/2022/09/northware-microsoft-power-bi-logo.png" alt="Microsoft Power BI">
+                    <p>Microsoft Power BI</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://dennistries.com/wp-content/uploads/2019/05/arduino-icon-2.png" alt="Arduino IDE">
+                    <p>Arduino IDE</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/free-piton-2038870-1720083.png?f=webp" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://store-images.s-microsoft.com/image/apps.21661.9007199267161390.afb6b8cd-d194-4a99-b633-03cd80118a21.e9a094be-ee73-4e19-8cdf-49a27b0974ed?h=210" alt="Microsoft 365 Copilot">
+                    <p>Microsoft 365 Copilot (antes Office)</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://img.utdstc.com/icon/4c9/33c/4c933cb96d4d64170e0c5e0e07e8e6fbc0ad8c2602728b6454f09ac1340e5f64:200" alt="Bizagi Modeler">
+                    <p>Bizagi Modeler</p>
+                </div>
+                <div class="tool-item">
+                    <img src="https://www.juntadeandalucia.es/educacion/eaprendizaje/wp-content/uploads/2020/12/GSuite_logo.png" alt="Google Workspace">
+                    <p>Google Workspace</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Add any necessary JavaScript here
+    </script>
+</body>
+</html>

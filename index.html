@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Rodrigo Morales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="circle-decoration"></div>
+
+    <header>
+        <div class="logo">Rodrigo Morales</div>
+        <button class="menu-button" aria-label="Menu" id="menuToggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+        </button>
+
+        <!-- Flecha apuntando -->
+        <div class="menu-hint">
+            <span>Haz clic aquí para saber más sobre mí</span>
+            <div class="arrow-hint"></div>
+        </div>
+    </header>
+
+    <nav class="main-menu" id="mainMenu">
+        <div class="menu-content">
+            <ul>
+                <li><a href="experiencia.html">Mi experiencia laboral</a></li>
+                <li><a href="estudios.html">Mis estudios y herramientas</a></li>
+                <li><a href="curriculum.html">Mi currículum</a></li>
+            </ul>
+            <div class="contact-section">
+                <h3>Contáctame</h3>
+                <p>Email: <a href="mailto:rodrigo@moralesa.org">rodrigo@moralesa.org</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/rodrigomoralesa/" target="_blank" rel="noopener noreferrer">Rodrigo Morales</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-grid">
+        <div class="left-column">
+            <h1 class="title">
+                Ingeniero<br>
+                Civil Industrial.
+            </h1>
+            <p class="description">
+                Apasionado por la tecnología, los avances en inteligencia artificial y el análisis de
+                datos. Disfruto aprender sobre herramientas y metodologías que optimicen procesos y transformen datos en
+                decisiones estratégicas. 
+            </p>
+            <div class="skills">
+                <p>Tengo experiencia en áreas como control de gestión, evaluación de proyectos y
+                    generación de reportes con herramientas como Excel, Power BI y Python.</p>
+                <p>Me motiva trabajar en entornos dinámicos y desafiantes, donde pueda aportar con proactividad y
+                    organización. Siempre estoy buscando nuevas formas de aprender y crecer profesionalmente en áreas
+                    relacionadas con la innovación y la tecnología.</p>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <div class="arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 20L20 4M20 4V16M20 4H8" />
+                </svg>
+            </div>
+
+            <div class="grid-pattern"></div>
+
+            <div class="profile-container">
+                <img src="imagenes/Foto.png" alt="Foto de perfil de Rodrigo Morales" class="profile-image" loading="eager">
+                <div class="overlay-image" id="overlayImage">
+                    <img src="imagenes/RodrigoIA.jpg" alt="Haz clic para verme" class="overlay-img">
+                    <p class="overlay-text">Haz clic sobre esta foto para conocerme</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainMenu = document.getElementById('mainMenu');
+            const overlayImage = document.getElementById('overlayImage');
+
+            menuToggle.addEventListener('click', function(event) {
+                event.stopPropagation();
+                mainMenu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mainMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mainMenu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+
+            // Generate grid pattern
+            const gridPattern = document.querySelector('.grid-pattern');
+            for (let i = 0; i < 144; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'grid-cell';
+                gridPattern.appendChild(cell);
+            }
+
+            // Handle overlay image click
+            overlayImage.addEventListener('click', function() {
+                overlayImage.style.opacity = '0';
+                setTimeout(() => {
+                    overlayImage.style.display = 'none';
+                }, 300); // Match the transition duration
+            });
+        });
+    </script>
+</body>
+</html>

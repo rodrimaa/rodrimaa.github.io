@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Experiencia Laboral - Rodrigo Morales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos para el timeline */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #f91880;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #f91880;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid #f91880;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #f91880;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid #f91880;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #f91880 transparent transparent;
+        }
+
+        .right::after {
+            left: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: #f91880;
+            position: relative;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .left .experience-logo {
+            right: -140px;
+        }
+
+        .right .experience-logo {
+            left: -140px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid #f91880;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #f91880 transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 15px;
+            }
+
+            .right {
+                left: 0%;
+            }
+
+            .experience-logo {
+                display: none;
+            }
+        }
+
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: #f91880;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            animation: slideIn 0.5s ease;
+        }
+
+        .modal-content h2 {
+            color:white;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle-decoration"></div>
+
+    <header>
+        <div class="logo">Rodrigo Morales</div>
+        <a href="index.html" class="back-button">
+            <i class="fas fa-home"></i> Volver a Inicio
+        </a>
+    </header>
+
+    <main>
+        <h1 class="title" style="text-align: center; margin-bottom: 2rem;">Mi Experiencia Laboral</h1>
+
+        <div class="timeline">
+            <!-- Experiencia 1 -->
+            <div class="timeline-item left">
+                <div class="content" onclick="openModal('modal1')">
+                    <h2>Analista de Planificación y Control de Gestión</h2>
+                    <h3>Clínica INDISA</h3>
+                    <p>Agosto 2024 - Actualidad</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvuW5D68hLieA0BbDu4KDkv7FzHxkYnzFn9Q&s" alt="Logo Clínica INDISA" class="experience-logo">
+            </div>
+
+            <!-- Experiencia 2 -->
+            <div class="timeline-item right">
+                <div class="content" onclick="openModal('modal2')">
+                    <h2>Practicante Universitario</h2>
+                    <h3>Caja Los Andes</h3>
+                    <p>Enero 2024 - Marzo 2024</p>
+                </div>
+                <img src="data:image/png;base64,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" alt="Logo Caja Los Andes" class="experience-logo">
+            </div>
+
+            <!-- Experiencia 3 -->
+            <div class="timeline-item left">
+                <div class="content" onclick="openModal('modal3')">
+                    <h2>Prácticante Analista Control de Gestión</h2>
+                    <h3>Clínica INDISA</h3>
+                    <p>Enero 2023 - Febrero 2023</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvuW5D68hLieA0BbDu4KDkv7FzHxkYnzFn9Q&s" alt="Logo Clínica INDISA" class="experience-logo">
+            </div>
+
+            <!-- Experiencia 4 -->
+            <div class="timeline-item right">
+                <div class="content" onclick="openModal('modal4')">
+                    <h2>Apoyo en Implementación de Sistema de Ventas Bsale</h2>
+                    <h3>PROFARMA S.P.A.</h3>
+                    <p>Diciembre 2019 - Febrero 2020</p>
+                </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLPWPIdhHdWZzmqEGOH45ZMMSkHtlU5tEc0w&s" alt="Logo PROFARMA S.P.A." class="experience-logo">
+            </div>
+        </div>
+
+        <!-- Modales -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <button class="close-button" onclick="closeModal('modal1')">&times;</button>
+                <h2>Analista de Planificación y Control de Gestión</h2>
+                <p>Trabajé en un proyecto estratégico, evaluando la viabilidad y desarrollo de un centro oftalmológico. Realicé análisis de mercado, cálculos en Excel y Python, proyecciones de demanda y evaluación económica de alternativas.</p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <button class="close-button" onclick="closeModal('modal2')">&times;</button>
+                <h2>Practicante Universitario</h2>
+                <p>Trabajé en la Subgerencia de Proyectos, mejorando procesos y gestionando documentación. Actualicé procedimientos, generé diagramas de procesos con Bizagi Modeler y recopilé datos socioeconómicos regionales.</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <button class="close-button" onclick="closeModal('modal3')">&times;</button>
+                <h2>Prácticante Analista Control de Gestión</h2>
+                <p>Como parte del programa de práctica universitaria, realicé labores de analista en el departamento de Control de Gestión, brindando apoyo en la generación de reportería, análisis de datos, realización de proyecciones de ventas y participación en el desarrollo de comités semanales para sucursal Maipú.</p>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <button class="close-button" onclick="closeModal('modal4')">&times;</button>
+                <h2>Apoyo en Implementación de Sistema de Ventas Bsale</h2>
+                <p>Apoyo en la implementación del sistema de ventas Bsale para grupo de farmacias, lo que implicó el ingreso de precios de costo y de venta, realización de un seguimiento de la rentabilidad y funcionamiento del sistema, alertando anomalías y aspectos de mejora.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Funciones para abrir y cerrar modales
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

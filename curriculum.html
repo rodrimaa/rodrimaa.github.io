@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Currículum - Rodrigo Morales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .cv-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: white;
+        }
+
+        .cv-section h1 {
+            color: #1d9bf0;
+            background: linear-gradient(to right, #3a31d8, #1d9bf0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .cv-section h2 {
+            color: #1d9bf0;
+            font-size: 1.8rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cv-section h3 {
+            color: #1d9bf0;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-section p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-section ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cv-section ul li {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+        }
+
+        .cv-section .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-section .contact-info p {
+            margin: 0;
+        }
+
+        .cv-section .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-section .tool-item {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .cv-section .tool-item p {
+            margin: 0;
+        }
+
+        .cv-section .download-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #1d9bf0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cv-section .download-button:hover {
+            background-color: #f91880;
+        }
+    </style>
+</head>
+<body>
+    <div class="circle-decoration"></div>
+
+    <header>
+        <div class="logo">Rodrigo Morales</div>
+        <a href="index.html" class="back-button">
+            <i class="fas fa-home"></i> Volver a Inicio
+        </a>
+    </header>
+
+    <main>
+        <div class="cv-section">
+            <h1>Mi Currículum</h1>
+
+            <!-- Resumen Profesional -->
+            <h2>Resumen Profesional</h2>
+            <p>
+                Ingeniero Civil Industrial de la Universidad Diego Portales, con Licenciatura en Ciencias de la Ingeniería. Interesado en áreas de economía, tecnología y análisis de datos. Busco oportunidades laborales desafiantes donde pueda aprender y aportar con planificación, rigurosidad y flexibilidad.
+            </p>
+
+            <!-- Historial Laboral -->
+            <h2>Historial Laboral</h2>
+
+            <h3>Analista de Planificación y Control de Gestión</h3>
+            <p><strong>Clínica INDISA</strong> | Agosto 2024 - Actualidad</p>
+            <ul>
+                <li>Trabajé en un proyecto estratégico, evaluando la viabilidad y desarrollo de un centro oftalmológico.</li>
+                <li>Realicé análisis de mercado, cálculos en Excel y Python, proyecciones de demanda y evaluación económica de alternativas.</li>
+            </ul>
+
+            <h3>Practicante Universitario</h3>
+            <p><strong>Caja Los Andes</strong> | Enero 2024 - Marzo 2024</p>
+            <ul>
+                <li>Trabajé en la Subgerencia de Proyectos, mejorando procesos y gestionando documentación.</li>
+                <li>Actualicé procedimientos, generé diagramas de procesos con Bizagi Modeler y recopilé datos socioeconómicos regionales.</li>
+            </ul>
+
+            <h3>Practicante Analista Control de Gestión</h3>
+            <p><strong>Clínica INDISA</strong> | Enero 2023 - Febrero 2023</p>
+            <ul>
+                <li>Realicé labores de analista en el departamento de Control de Gestión, brindando apoyo en la generación de reportería, análisis de datos y proyecciones de ventas.</li>
+                <li>Participé en el desarrollo de comités semanales para sucursal Maipú.</li>
+            </ul>
+
+            <h3>Freelance</h3>
+            <p><strong>PROFARMA S.P.A.</strong> | Diciembre 2019 - Febrero 2020</p>
+            <ul>
+                <li>Apoyo en la implementación del sistema de ventas Bsale para grupo de farmacias.</li>
+                <li>Realicé seguimiento de la rentabilidad y funcionamiento del sistema, alertando anomalías y aspectos de mejora.</li>
+            </ul>
+
+            <!-- Manejo de Herramientas -->
+            <h2>Manejo de Herramientas</h2>
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <p>R / R Studio</p>
+                </div>
+                <div class="tool-item">
+                    <p>Microsoft Access</p>
+                </div>
+                <div class="tool-item">
+                    <p>Adobe Photoshop</p>
+                </div>
+                <div class="tool-item">
+                    <p>Oracle Studio</p>
+                </div>
+                <div class="tool-item">
+                    <p>Microsoft Power BI</p>
+                </div>
+                <div class="tool-item">
+                    <p>Arduino IDE</p>
+                </div>
+                <div class="tool-item">
+                    <p>Python</p>
+                </div>
+                <div class="tool-item">
+                    <p>Microsoft Office</p>
+                </div>
+                <div class="tool-item">
+                    <p>Bizagi Modeler</p>
+                </div>
+                <div class="tool-item">
+                    <p>Google Workspace</p>
+                </div>
+            </div>
+
+            <!-- Formación -->
+            <h2>Formación</h2>
+            <h3>Ingeniería Civil Industrial</h3>
+            <p><strong>Universidad Diego Portales</strong> | Marzo 2019 - Julio 2024</p>
+
+            <!-- Educación Adicional -->
+            <h2>Educación Adicional</h2>
+            <p>Curso para desarrolladores web - Bluuweb (HTML, CSS y JavaScript nivel intermedio), 2024.</p>
+
+            <!-- Idiomas -->
+            <h2>Idiomas</h2>
+            <p><strong>Inglés:</strong> B2 (Intermedio avanzado)</p>
+
+            <!-- Botón de Descarga -->
+            <a href="CV Rodrigo Morales Aguirre.pdf" class="download-button" download>
+                <i class="fas fa-download"></i> Descargar CV en PDF
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Add any necessary JavaScript here
+    </script>
+</body>
+</html>
