@@ -125,18 +125,3 @@
 </body>
 </html>
 
-function closeMenu() {
-    const mainMenu = document.getElementById('mainMenu');
-    const menuToggle = document.getElementById('menuToggle');
-    mainMenu.classList.remove('active');
-    menuToggle.classList.remove('active');
-}
-
-document.addEventListener('click', function(event) {
-    const mainMenu = document.getElementById('mainMenu');
-    const menuToggle = document.getElementById('menuToggle');
-    if (!mainMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-        mainMenu.classList.remove('active');
-        menuToggle.classList.remove('active');
-    }
-});
